@@ -1,0 +1,8 @@
+langchain
+wikipedia
+langchain-openai
+langchain-antropic
+pydantic
+openai
+re
+streamlit
