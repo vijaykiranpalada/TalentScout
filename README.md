@@ -55,6 +55,63 @@ Ensure sensitive files like .env are not tracked by Git.
 ## 🖥️ Running the App
 streamlit run app.py
 
+⚙️ Technical Details
+
+Libraries Used
+
+streamlit: UI rendering
+
+openai: LLM API for question generation
+
+re, os: Validation and env variable handling
+
+python-dotenv: Environment variable loader (optional)
+
+Model Used
+
+OpenAI GPT
+
+Architectural Decisions
+
+Modular code in app.py and utils.py
+
+Stateless logic managed via Streamlit session state
+
+Questions are dynamically generated per tech stack input
+
+Graceful fallbacks for validation and API errors
+
+✍️ Prompt Design
+
+Prompts are tailored to ensure relevance and accuracy:
+
+Info Gathering: Guided inputs for name, email, phone, etc., using form fields.
+
+Tech Stack: Candidates are asked to list technologies in a comma-separated format.
+
+Question Generation Prompt:
+
+Generate 3-5 technical interview questions to assess proficiency in [TECH]. The questions should be challenging, relevant, and concise.
+
+This system prompt sets the model's role as a technical interviewer, guiding it to stay on-topic and generate skill-based questions.
+
+🚧 Challenges & Solutions
+
+1. Sensitive Data Handling
+
+Challenge: Avoid hardcoding API keys and exposing personal info.
+Solution: Environment variables and .gitignore to exclude .env files.
+
+2. Maintaining Context
+
+Challenge: Ensuring a logical conversation flow between form steps.
+Solution: Leveraged st.session_state to track candidate progress and inputs.
+
+3. Question Quality Consistency
+
+Challenge: Ensuring that GPT produces relevant, unique questions.
+Solution: Used a consistent prompt template with adjusted temperature and max_tokens to balance creativity and relevance.
+
 ## 👨‍💻 Author
 vijay Kiran Palada – 9059696060
 mail: vijaykiran.palada@gmail.com
