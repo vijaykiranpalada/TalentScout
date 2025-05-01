@@ -34,12 +34,23 @@ in screening tech candidates based on their experience and declared tech stack.
 2. Create and activate a virtual environment:
 python -m venv venv
 .\venv\Scripts\activate
+3. create requirements.txt file
+langchain
+langchain-openai
+pydantic
+openai
+re
+streamlit
+python-dotenv
 
-3. Install dependencies:
+4. Install dependencies:
 pip install -r requirements.txt
 
-4. Create a `.env` file:
+5. Create a `.env` file:
 OPENAI_API_KEY=your-openai-api-key-here
+
+6.Create a .gitignore File
+Ensure sensitive files like .env are not tracked by Git.
 
 ## 🖥️ Running the App
 streamlit run app.py
