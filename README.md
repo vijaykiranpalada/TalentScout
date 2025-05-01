@@ -35,13 +35,13 @@ in screening tech candidates based on their experience and declared tech stack.
 python -m venv venv
 .\venv\Scripts\activate
 3. create requirements.txt file
-langchain
-langchain-openai
-pydantic
-openai
-re
-streamlit
-python-dotenv
+langchain,
+langchain-openai,
+pydantic,
+openai,
+re,
+streamlit,
+python-dotenv,
 
 4. Install dependencies:
 pip install -r requirements.txt
