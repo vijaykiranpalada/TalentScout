@@ -2,11 +2,11 @@
 
 import re
 import openai
+from dotenv import load_dotenv
+load_dotenv()
 
-# Set your OpenAI API key here or load from environment
-#openai.api_key = "sk-XXXXXXXXXX"
-
-
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 def validate_email(email: str) -> bool:
     """
     Validate the format of an email address using regex.
