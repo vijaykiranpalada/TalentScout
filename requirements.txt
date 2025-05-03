@@ -2,6 +2,5 @@ langchain
 langchain-openai
 pydantic
 openai
-re
 streamlit
 python-dotenv
